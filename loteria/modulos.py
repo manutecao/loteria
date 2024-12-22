@@ -30,30 +30,9 @@ def menu(txt, opc):
             return esc
 
 def simular(precos, cartela, aposta, sequencia, sorteio):
-    """numQtd = menu('Quer simular jogos de quantos números?',
-                         ['6 números','7 números', '8 números', 'Outro número'])
-           if numQtd == 1:
-               numeros = 6
-           elif numQtd == 2:
-               numeros = 7
-           elif numQtd == 3:
-               numeros = 8
-           elif numQtd == 4:
-               numeros = leiaint('Escolha outro número: ', True,9, 20)"""
-
     titulo('Quer simular jogos de quantos números?')
     print(f'Você pode fazer jogos de {aposta['piso']} a {aposta['teto']} números.')
     numeros = leiaint('Quantidades de número por jogo: ', escopo=True, piso=aposta['piso'], teto=aposta['teto'])
-
-    """alvo = menu('Qual sequência você quer acertar?',
-         ['Quadra - 4 números', 'Quina - 5 números', 'Sena - 6 números'])
-    if alvo == 1:
-        alvo = 4
-    elif alvo == 2:
-        alvo = 5
-    elif alvo == 3:
-        alvo = 6"""
-
     titulo('Qual sequência você quer acertar?')
     if sequencia['txt'] == '':
         print(f'Você pode tentar acertar de {sequencia['piso']} a {sequencia['teto']} números.')

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58bf76b1-e793-49c8-b7d1-6ada4055da1a" name="Changes" comment="">
+    <list default="true" id="58bf76b1-e793-49c8-b7d1-6ada4055da1a" name="Changes" comment="modularização da simulação">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loteria/loteria.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/loteria(old).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loteria/modulos.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/modulos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loteria/numeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/numeros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loteria/principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/principal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "manutecao"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/manutecao/loteria.git",
+    "accountId": "0b6455d8-598c-4ea5-9413-0b93e4fc6a91"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -66,6 +75,19 @@
       <option name="presentableId" value="Default" />
       <updated>1734895873441</updated>
     </task>
+    <task id="LOCAL-00001" summary="modularização da simulação">
+      <option name="closed" value="true" />
+      <created>1734904256555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734904256555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modularização da simulação" />
+    <option name="LAST_COMMIT_MESSAGE" value="modularização da simulação" />
   </component>
 </project>
