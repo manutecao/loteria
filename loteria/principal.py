@@ -1,6 +1,6 @@
-from pacotes.modulos import *
-from pacotes.outros import *
-from pacotes. numeros import *
+from modulos import *
+from outros import *
+from numeros import *
 
 while True:
     opc = menu('REBOCO Loteria Simulator v0.1',
@@ -22,7 +22,7 @@ while True:
             numeros = leiaint('Escolha outro número: ', True,9, 20)"""
         titulo('Quer simular jogos de quantos números?')
         print('Você pode fazer jogos de 6 a 20 números.')
-        numeros = leiaint('Quantidades de número por jogo: ', True, 6, 20)
+        numeros = leiaint('Quantidades de número por jogo: ', escopo=True, piso=6, teto=20)
         alvo = menu('Qual sequência você quer acertar?',
              ['Quadra - 4 números', 'Quina - 5 números', 'Sena - 6 números'])
         if alvo == 1:

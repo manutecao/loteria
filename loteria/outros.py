@@ -22,15 +22,17 @@ def titulo(msg):
     print(msg.center(len(msg)+4))
     linha(1, (len(msg)+4))
 
-def leiaint(msg, range=False, min=0, max=10):
+def leiaint(msg, flag=0, escopo=False, piso=0, teto=10):
     """
     Coleta um número e garante que ele é do tipo 'int'.
     :param msg: Mensagem de coleta 'str'.
-    (opcional)
-    :param range: Pergunta se quer estabelecer um range para o número coletado.
-    :param min: Mínimo do range.
-    :param max: Máximo do range.
-    :return: O número inteiro 'int'.
+    :param flag: 'int' que será retornado em caso de
+    'KeyboardInterruptError'
+    (Opcional:)
+        :param escopo: padrão 'False', determina escopo do número a ser coletado.
+        :param piso: Limite mínimo do escopo 'int'.
+        :param teto: Limite máximo do escopo 'int'.
+    :return: O número inteiro 'int' que foi coletado
     """
     while True:
         try:
@@ -39,12 +41,13 @@ def leiaint(msg, range=False, min=0, max=10):
             vermelho('ERRO! A entrada não é uma válida, tente novamente.')
         except KeyboardInterrupt:
             interrompeu()
+            return flag
         else:
-            if range:
-                if max >= num >= min:
+            if escopo:
+                if teto >= num >= piso:
                     return num
                 else:
-                    vermelho(f'Digite um valor maior entre {min} e {max}.')
+                    print(f'Digite um número entra {piso} e {teto}.')
             else:
                 return num
 
