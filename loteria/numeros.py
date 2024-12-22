@@ -1,8 +1,8 @@
 from random import sample
 
 # Sorteia os 6 números únicos entre 1 e 60
-def sortear_numeros(qtd):
-    return sorted(sample(range(1, 61), qtd))
+def sortear_numeros(qtd, piso, teto):
+    return sorted(sample(range(piso, teto+1), qtd))
 
 # Verifica se duas listas são iguais
 def acertou(num_sorteados, tentativa, atingir=0):
