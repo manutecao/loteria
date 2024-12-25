@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58bf76b1-e793-49c8-b7d1-6ada4055da1a" name="Changes" comment="modularização da simulação">
+    <list default="true" id="58bf76b1-e793-49c8-b7d1-6ada4055da1a" name="Changes" comment="Tratamento de KeyboardInterruptError">
+      <changelist_data name="manutecao" email="manutecaoemgeral@gmail.com" automatic="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/loteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/loteria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loteria/modulos.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/modulos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loteria/outros.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/outros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loteria/principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/loteria/principal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +26,23 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="manutecao &lt;manutecaoemgeral@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "manutecao"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;manutecao&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/manutecao/loteria.git",
-    "accountId": "0b6455d8-598c-4ea5-9413-0b93e4fc6a91"
+    "url": "https://github.com/manutecao/loteria",
+    "accountId": "86eef8c3-ac20-4be4-9f7a-3270204cb987"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -46,12 +56,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.modulos.executor": "Run",
     "Python.numeros.executor": "Run",
+    "Python.outros.executor": "Run",
     "Python.principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -88,6 +101,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modularização da simulação" />
-    <option name="LAST_COMMIT_MESSAGE" value="modularização da simulação" />
+    <MESSAGE value="tratamento de KeyboardInterruptionError" />
+    <MESSAGE value="gitgnore?" />
+    <MESSAGE value="Tratamento de KeyboardInterruptError" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratamento de KeyboardInterruptError" />
   </component>
 </project>

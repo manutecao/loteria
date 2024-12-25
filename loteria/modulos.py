@@ -23,30 +23,48 @@ def menu(txt, opc):
         print(f' {op + 1} - \033[34m{opc[op]:<23}\033[m')
     linha(1, 30)
     while True:
-        esc = leiaint('Sua opção: ')
-        if esc < 0 or esc > len(opc):
-            vermelho(f'\'{esc}\' não é uma opção do menu.')
-        else:
-            return esc
+        esc = leiaint('Sua opção: ', escopo=True, piso=1, teto=len(opc), flag=-1, foramsg='Opção fora da lista.')
+        return esc
 
-def simular(precos, cartela, aposta, sequencia, sorteio):
+def simularunico(precos, cartela, aposta, sequencia, sorteio):
+    """
+    Coleta os parãmetros de aposta de um jogador e simula apostas sequenciais até que uma acerte a sequencia alvo
+    determinada.
+    :param precos: 'dict' com o preço dos jogos, index == QTD de números, valor == preço da aposta equivalente
+    :param cartela: 'dict' QTD de núemros da cartela, 'piso' == valor mínimo, 'teto' == valor máximo
+    :param aposta: 'dict' QTD de números por aposta. 'piso' == valor mínimo, 'teto' == valor máximo
+    :param sequencia: dict' QTD de números por aposta. 'piso' == valor mínimo, 'teto' == valor máximo
+    :param sorteio: 'dict' QTD de acertos possíveis, 'piso' == valor mínimo, 'teto' == valor máximo
+                    Usar 'txt' caso as sequências tiverem nomes e quiser especificá-las.
+    :return: Nada, mostra tudo na tela sozinha.
+    """
     titulo('Quer simular jogos de quantos números?')
     print(f'Você pode fazer jogos de {aposta['piso']} a {aposta['teto']} números.')
-    numeros = leiaint('Quantidades de número por jogo: ', escopo=True, piso=aposta['piso'], teto=aposta['teto'])
+    numeros = leiaint('Quantidades de número por jogo: ', escopo=True, piso=aposta['piso'], teto=aposta['teto'], flag=0)
+    if numeros == 0:
+        return
+
+    # Coleta a sequencia que a simulação deverá acertar antes de parar
     titulo('Qual sequência você quer acertar?')
     if sequencia['txt'] == '':
         print(f'Você pode tentar acertar de {sequencia['piso']} a {sequencia['teto']} números.')
     else:
         print(sequencia['txt'])
-    alvo = leiaint('Sequência: ', escopo=True, piso=sequencia['piso'], teto=sequencia['teto'])
+    alvo = leiaint('Sequência: ', escopo=True, piso=sequencia['piso'], teto=sequencia['teto'], flag=0)
+    if alvo == 0:
+        return
 
-    # Inicializa o sorteio
+    # Sorteia os números
     linha(1, 40)
     numeros_sorteados = sortear_numeros(sorteio, cartela['piso'], cartela['teto'])
     print(f"Números sorteados: {numeros_sorteados}")
-    input('Aperte enter para continuar...')
-    # Faz os jogos
-    #tentativa = []
+    try:
+        input('Aperte enter para continuar...')
+    except KeyboardInterrupt:
+        interrompeu()
+        return
+
+    # Faz os jogos e testa se acertou
     tentativas = 0
     while True:
         tentativa = sortear_numeros(numeros, cartela['piso'], cartela['teto'])

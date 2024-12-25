@@ -22,7 +22,7 @@ def titulo(msg):
     print(msg.center(len(msg)+4))
     linha(1, (len(msg)+4))
 
-def leiaint(msg, flag=0, escopo=False, piso=0, teto=10):
+def leiaint(msg, flag=0, escopo=False, piso=0, teto=10, foramsg=''):
     """
     Coleta um número e garante que ele é do tipo 'int'.
     :param msg: Mensagem de coleta 'str'.
@@ -32,6 +32,7 @@ def leiaint(msg, flag=0, escopo=False, piso=0, teto=10):
         :param escopo: padrão 'False', determina escopo do número a ser coletado.
         :param piso: Limite mínimo do escopo 'int'.
         :param teto: Limite máximo do escopo 'int'.
+        :param foramsg: Mensagem personalizada para entrada 'int' fora do escopo.
     :return: O número inteiro 'int' que foi coletado
     """
     while True:
@@ -47,7 +48,10 @@ def leiaint(msg, flag=0, escopo=False, piso=0, teto=10):
                 if teto >= num >= piso:
                     return num
                 else:
-                    print(f'Digite um número entra {piso} e {teto}.')
+                    if foramsg == '':
+                        print(f'Digite um número entra {piso} e {teto}.')
+                    else:
+                        print(foramsg)
             else:
                 return num
 
